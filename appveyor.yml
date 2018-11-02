@@ -40,6 +40,9 @@ init:
 - if "%APPVEYOR_BUILD_WORKER_IMAGE%"=="Visual Studio 2013" ( set generator="Visual Studio 12 2013%arch%" )
 - echo %generator%
 
+install:
+  - choco install -y nsis -pre
+
 before_build:
 - cmd: |-
     mkdir BUILD
@@ -59,12 +62,15 @@ after_build:
     dir
     cpack .
     dir
-    cpack -D CPACK_ARCHIVE_COMPONENT_INSTALL=OFF . 
+    cpack -D CPACK_ARCHIVE_COMPONENT_INSTALL=OFF -C Release
     dir
-    cpack -G WXI .
+    cpack -G WIX -C Release
     dir
-    cpack -G NSIN .
+    cpack -G NSIN -C Release
     dir
 
 artifacts:
-  - path: '**\*.zip'
+  - path: 'BUILD/*.zip'
+    name: portable
+  - path: 'BUILD/*.msi'
+    name: installer
