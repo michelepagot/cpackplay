@@ -31,7 +31,6 @@ cpack_add_component(pip1
 	DESCRIPTION "An extremely useful application that makes use of Pippo1"
 	GROUP Runtime
 	INSTALL_TYPES Full
-	#ARCHIVE_FILE filepippo1
 	)
 
 
@@ -40,5 +39,4 @@ cpack_add_component(pip2
 	DESCRIPTION "An extremely useful application that makes use of Pippo2"
 	GROUP Development
 	INSTALL_TYPES Developer
-	#ARCHIVE_FILE filepippo2
 	)
