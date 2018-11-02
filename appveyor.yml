@@ -51,3 +51,13 @@ build:
   project: c:\projects\cpackplay\BUILD\pippo.sln
   verbosity: minimal
   parallel: true
+
+after_build:
+- cmd: |-
+    cd BUILD
+    cmake --build . --target package
+    dir
+    cpack .
+    dir
+    cpack -D CPACK_COMPONENT_INSTALL=OFF . 
+    dir
