@@ -1,0 +1,12 @@
+language: c
+
+compiler:
+        - gcc
+        - clang
+
+before_script:
+        - mkdir BUILD
+        - cd BUILD
+        - cmake ..
+
+script: make && make package && cpack -D CPACK_COMPONENT_INSTALL=OFF .
