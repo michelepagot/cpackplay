@@ -3,10 +3,13 @@ language: c
 compiler:
         - gcc
         - clang
+addons:
+        apt:
+                packages: [ nsis ]
 
 before_script:
         - mkdir BUILD
         - cd BUILD
         - cmake ..
 
-script: make && make package && cpack -D CPACK_ARCHIVE_COMPONENT_INSTALL=OFF . && ls -lai 
+script: make && make package && cpack -D CPACK_ARCHIVE_COMPONENT_INSTALL=OFF . && ls -lai && cpack --debug -G NSIS && ls -lai
