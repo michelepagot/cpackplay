@@ -61,3 +61,10 @@ after_build:
     dir
     cpack -D CPACK_ARCHIVE_COMPONENT_INSTALL=OFF . 
     dir
+    cpack -G WXI .
+    dir
+    cpack -G NSIN .
+    dir
+
+artifacts:
+  - path: '**\*.zip'

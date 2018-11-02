@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.com/michelepagot/cpackplay.svg?branch=master)](https://travis-ci.com/michelepagot/cpackplay)
-
-[![Build status](https://ci.appveyor.com/api/projects/status/w3vhd747la12vgyy?svg=true)](https://ci.appveyor.com/project/michelepagot/cpackplay)
+[![Build Status](https://travis-ci.com/michelepagot/cpackplay.svg?branch=master)](https://travis-ci.com/michelepagot/cpackplay)   [![Build status](https://ci.appveyor.com/api/projects/status/w3vhd747la12vgyy?svg=true)](https://ci.appveyor.com/project/michelepagot/cpackplay)
 
 # cpackplay
 Example project to use cpack and explore its capability
