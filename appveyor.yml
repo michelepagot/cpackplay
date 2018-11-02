@@ -7,7 +7,7 @@ only_commits:
   files:
     - CMakeLists.txt
     - appveyor.yml
-    - *.c
+    - '**/*.c'
 
 clone_folder: c:\projects\cpackplay
 
