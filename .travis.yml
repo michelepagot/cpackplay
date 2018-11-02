@@ -9,4 +9,4 @@ before_script:
         - cd BUILD
         - cmake ..
 
-script: make && make package && cpack -D CPACK_COMPONENT_INSTALL=OFF . && ls -lai 
+script: make && make package && cpack -D CPACK_ARCHIVE_COMPONENT_INSTALL=OFF . && ls -lai 

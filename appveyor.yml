@@ -54,10 +54,10 @@ build:
 
 after_build:
 - cmd: |-
-    cd BUILD
+    cd c:\projects\cpackplay\BUILD
     cmake --build . --target package
     dir
     cpack .
     dir
-    cpack -D CPACK_COMPONENT_INSTALL=OFF . 
+    cpack -D CPACK_ARCHIVE_COMPONENT_INSTALL=OFF . 
     dir

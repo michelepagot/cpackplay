@@ -13,7 +13,6 @@ set(CPACK_PACKAGE_VENDOR "Me, myself, and I")
 set(CPACK_PACKAGE_VERSION_MAJOR "1")
 set(CPACK_PACKAGE_VERSION_MINOR "3")
 set(CPACK_PACKAGE_VERSION_PATCH "2")
-#set(CPACK_COMPONENTS_GROUPING ONE_PER_GROUP)
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "gigio@giogio")
 set(CPACK_ARCHIVE_COMPONENT_INSTALL ON)
 set(CPACK_DEB_COMPONENT_INSTALL ON)
@@ -31,11 +30,15 @@ cpack_add_component(pip1
 	DISPLAY_NAME "Pippo1 pip Application"
 	DESCRIPTION "An extremely useful application that makes use of Pippo1"
 	GROUP Runtime
-	INSTALL_TYPES Full)
+	INSTALL_TYPES Full
+	#ARCHIVE_FILE filepippo1
+	)
 
 
 cpack_add_component(pip2
 	DISPLAY_NAME "Pippo2 pip Application"
 	DESCRIPTION "An extremely useful application that makes use of Pippo2"
 	GROUP Development
-	INSTALL_TYPES Developer)
+	INSTALL_TYPES Developer
+	#ARCHIVE_FILE filepippo2
+	)
