@@ -18,25 +18,24 @@ set(CPACK_ARCHIVE_COMPONENT_INSTALL ON)
 set(CPACK_DEB_COMPONENT_INSTALL ON)
 include(CPack)
 
-cpack_add_install_type(Full)
-cpack_add_install_type(Developer)
+cpack_add_install_type(TypePippo1)
+cpack_add_install_type(TypePippo2)
 
 # Component groups
-cpack_add_component_group(Runtime)
-cpack_add_component_group(Development)
+cpack_add_component_group(Pippo1Group)
+cpack_add_component_group(Pippo2Group)
 
 # Components
 cpack_add_component(pip1
 	DISPLAY_NAME "Pippo1 pip Application"
 	DESCRIPTION "An extremely useful application that makes use of Pippo1"
-	GROUP Runtime
-	INSTALL_TYPES Full
+	GROUP Pippo1Group
+	INSTALL_TYPES TypePippo1
 	)
-
 
 cpack_add_component(pip2
 	DISPLAY_NAME "Pippo2 pip Application"
 	DESCRIPTION "An extremely useful application that makes use of Pippo2"
-	GROUP Development
-	INSTALL_TYPES Developer
+	GROUP Pippo2Group
+	INSTALL_TYPES TypePippo2
 	)
